@@ -1,9 +1,26 @@
 import React from "react";
 
 const reviews = [
-  { name: "Alice Smith", text: "Fantastic ebook design! My clients loved the interactive features." },
-  { name: "John Doe", text: "Professional and timely delivery. Highly recommended for business ebooks." },
-  { name: "Maria Garcia", text: "Creative layouts and great communication throughout the project." },
+  {
+    name: "Joseph Boucher",
+    text: "I'm especially grateful for the support I received from the team. They were always available to answer my questions and help me through any challenges.",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+  },
+  {
+    name: "Gurmit Meade",
+    text: "I'm a self-published author who has used Google Book Publisher to publish several of my books. I've been consistently impressed with the quality of their service.",
+    avatar: "https://randomuser.me/api/portraits/men/45.jpg"
+  },
+  {
+    name: "Fernande Desarmes",
+    text: "I'm a professor who has used Google Book Publisher to publish my textbook. I'm very happy with the results. They made it easy to publish my textbook, and worked with me to create a custom template that matched my needs.",
+    avatar: "https://randomuser.me/api/portraits/women/65.jpg"
+  },
+  {
+    name: "Maria Garcia",
+    text: "Creative layouts and great communication throughout the project.",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+  },
 ];
 
 const quoteIcon = (
@@ -11,13 +28,14 @@ const quoteIcon = (
 );
 
 const Reviews = () => (
-  <section className="py-16 bg-blue-50">
-    <div className="max-w-4xl mx-auto px-4">
+  <section id="reviews" className="py-20 bg-blue-50">
+    <div className="max-w-6xl mx-auto px-4">
       <h2 className="text-3xl font-bold text-blue-800 mb-10 text-center">Testimonials</h2>
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-8">
         {reviews.map((review, idx) => (
           <div key={idx} className="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition flex flex-col items-center">
             {quoteIcon}
+            <img src={review.avatar} alt={review.name} className="w-16 h-16 rounded-full border-4 border-blue-100 mb-3 object-cover" />
             <p className="text-gray-700 italic mb-4">"{review.text}"</p>
             <div className="font-semibold text-blue-700">- {review.name}</div>
           </div>

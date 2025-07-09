@@ -6,6 +6,7 @@ import Expertise from "./components/Expertise";
 import Pricing from "./components/Pricing";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
+import PromoBanner from "./components/PromoBanner";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <PromoBanner />
         <Expertise />
         <Projects />
         <Reviews />
